@@ -6,48 +6,56 @@ function Portfolio({ portfolio }) {
   const [toggler, setToggler] = useState(false);
 
   const handleLightbox = (e) => {
-    if (!link) {
-      e.preventDefault();
-      setToggler(!toggler);
-    }
+    e.preventDefault();
+    setToggler(!toggler);
   };
 
-  const handleIcon = () => {
+  const renderLinkIcon = () => {
     if (link) {
-      return <i className="icon-link"></i>;
-    } else if (popupLink) {
-      if (popupLink.length > 1) {
-        if (popupLink.toString().match(/youtube/g)) {
-          return <i className="icon-camrecorder"></i>;
-        }
-        return <i className="icon-picture"></i>;
-      } else if (popupLink.toString().match(/youtube/g)) {
-        return <i className="icon-camrecorder"></i>;
-      } else {
-        return <i className="icon-magnifier-add"></i>;
-      }
+      return (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="icon-link-wrapper">
+          <i className="icon-link"></i>
+        </a>
+      );
     }
-    return <i className="icon-magnifier-add"></i>;
+    return null;
   };
+
+  const renderPopupIcon = () => {
+    if (popupLink) {
+      let icon;
+      if (popupLink.toString().match(/youtube/g)) {
+        icon = <i className="icon-camrecorder"></i>;
+      } else {
+        icon = <i className="icon-magnifier-add"></i>;
+      }
+      return (
+        <a href="!#" onClick={handleLightbox} className="icon-popup-wrapper">
+          {icon}
+        </a>
+      );
+    }
+    return null;
+  };
+
   return (
     <>
-      <a
-        href={link ? link : "!#"}
-        className="work-image"
-        onClick={handleLightbox}
-      >
-        <div className="portfolio-item rounded shadow-dark">
-          <div className="details">
-            <span className="term text-capitalize">{category}</span>
-            <h4 className="title">{title}</h4>
-            <span className="more-button">{handleIcon()}</span>
-          </div>
-          <div className="thumb">
-            <img src={image} alt="Portfolio-title" />
-            <div className="mask"></div>
-          </div>
+      <div className="portfolio-item rounded shadow-dark">
+        <div className="details">
+          <span className="term text-capitalize">{category}</span>
+          <h4 className="title">{title}</h4>
+          <span className="more-button link-icon">
+            {renderLinkIcon()}
+          </span>
+          <span className="more-button popup-link">
+            {renderPopupIcon()}
+          </span>
         </div>
-      </a>
+        <div className="thumb">
+          <img src={image} alt={title} />
+          <div className="mask"></div>
+        </div>
+      </div>
       {popupLink && <FsLightbox toggler={toggler} sources={popupLink} />}
     </>
   );

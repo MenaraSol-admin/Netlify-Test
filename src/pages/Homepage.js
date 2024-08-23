@@ -53,9 +53,9 @@ function Homepage() {
         <Element name="section-education">
           <Education />
         </Element>
-        {/* <Element name="section-works">
+        <Element name="section-works">
           <Works />
-        </Element> */}
+        </Element>
         {/* <Element name="section-pricing">
           <Pricing />
         </Element> */}

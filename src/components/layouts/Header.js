@@ -96,7 +96,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
                 <i className="icon-graduation"></i>Education
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 activeClass="active"
                 to="section-works"
@@ -107,7 +107,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
                 <i className="icon-layers"></i>Works
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 activeClass="active"
                 to="section-blogs"

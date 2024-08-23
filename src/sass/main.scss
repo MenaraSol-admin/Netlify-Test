@@ -269,7 +269,7 @@ section.home {
         }
         span.term {
             color: #fff;
-            background: $colorpink;
+            background: #997E2E;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             font-size: 14px;
@@ -296,7 +296,17 @@ section.home {
             left: 20px;
             width: 40px;
             opacity: 0;
+            text-decoration: none;
             @include transition(0.3s);
+
+            &.link-icon {
+                left: 70px;
+            }
+
+            .icon-popup-wrapper,
+            .icon-link-wrapper {
+                text-decoration: none;
+            }
         }
     }
     .mask {
