@@ -64,6 +64,8 @@ only screen and (min-device-pixel-ratio: 1.5){
 @media only screen and (max-width: 768px) {
 	section.home {
 		padding: 300px 0;
+		height: 93.5vh;
+		min-height: 93.5vh;
 	}
 	.portfolio-filter {
 		display: none;

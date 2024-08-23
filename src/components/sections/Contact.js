@@ -13,23 +13,55 @@ function Contact() {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
+
+    // Frontend validation
     if (!formdata.name) {
       setError(true);
       setMessage("Name is required");
+      return;
     } else if (!formdata.email) {
       setError(true);
       setMessage("Email is required");
+      return;
     } else if (!formdata.subject) {
       setError(true);
       setMessage("Subject is required");
+      return;
     } else if (!formdata.message) {
       setError(true);
       setMessage("Message is required");
-    } else {
-      setError(false);
-      setMessage("You message has been sent!!!");
+      return;
+    }
+
+    // Send form data to backend
+    try {
+      const response = await fetch("https://portfolio-mailer-6877965b59ce.herokuapp.com/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formdata),
+      });
+
+      const result = await response.json();
+      if (result.status === "Email sent") {
+        setError(false);
+        setMessage("Your message has been sent successfully!");
+        setFormdata({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setError(true);
+        setMessage("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      setError(true);
+      setMessage("An error occurred. Please try again later.");
     }
   };
 
@@ -41,13 +73,14 @@ function Contact() {
   };
 
   const handleAlerts = () => {
-    if (error && message) {
-      return <div className="alert alert-danger mt-4">{message}</div>;
-    } else if (!error && message) {
-      return <div className="alert alert-success mt-4">{message}</div>;
-    } else {
-      return null;
+    if (message) {
+      return (
+        <div className={`alert mt-4 ${error ? "alert-danger" : "alert-success"}`}>
+          {message}
+        </div>
+      );
     }
+    return null;
   };
 
   return (
