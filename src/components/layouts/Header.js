@@ -71,7 +71,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
                 smooth={true}
                 duration={500}
               >
-                <i className="icon-briefcase"></i>Services
+                <i className="icon-list"></i>Services
               </Link>
             </li>
             <li>
@@ -82,7 +82,18 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
                 smooth={true}
                 duration={500}
               >
-                <i className="icon-graduation"></i>Experience
+                <i className="icon-briefcase"></i>Experience
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="section-education"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <i className="icon-graduation"></i>Education
               </Link>
             </li>
             {/* <li>

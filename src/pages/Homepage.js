@@ -7,6 +7,7 @@ import Blogs from "../components/sections/Blogs";
 import Brandlogos from "../components/sections/Brandlogos";
 import Contact from "../components/sections/Contact";
 import Experiences from "../components/sections/Experiences";
+import Education from "../components/sections/Education";
 import Herosection from "../components/sections/Herosection";
 import Pricing from "../components/sections/Pricing";
 import Services from "../components/sections/Services";
@@ -48,6 +49,9 @@ function Homepage() {
         </Element>
         <Element name="section-experiences">
           <Experiences />
+        </Element>
+        <Element name="section-education">
+          <Education />
         </Element>
         {/* <Element name="section-works">
           <Works />
