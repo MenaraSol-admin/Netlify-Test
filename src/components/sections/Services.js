@@ -6,29 +6,29 @@ import Service from "../elements/Service";
 const servicesData = [
   {
     id: 1,
-    icon: "images/idea.png",
+    icon: "images/ux-design.svg",
     title: "Product Design",
     content:
       "Prioritizing user experience and making sure every corner of your web app is perfect and reflects the essence of your business.",
-    color: "#6C6CE5",
+    color: "#02111B",
     contentColor: "light",
   },
   {
     id: 2,
-    icon: "images/web-development.png",
+    icon: "images/coding.svg",
     title: "Web Development",
     content:
       "Using the latest technologies to ensure website performance and scalability to keep your business moving.",
-    color: "#F9D74C",
-    contentColor: "dark",
+    color: "#02111B",
+    contentColor: "light",
   },
   {
     id: 3,
-    icon: "images/shopping.png",
+    icon: "images/ecommerce.svg",
     title: "E-Commerce Development",
     content:
       "Partnering with BigCommerce and Shopify to provide your business with everything it needs to grow and meet your goals.",
-    color: "#F97B8B",
+    color: "#02111B",
     contentColor: "light",
   },
 ];

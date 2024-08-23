@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import HomepageLight from "./pages/HomepageLight";
-import HomepageDark from "./pages/HomepageDark";
-import Homepage2 from "./pages/Homepage2";
-import Homepage2Light from "./pages/Homepage2Light";
-import Homepage2Dark from "./pages/Homepage2Dark";
-import Homepage3 from "./pages/Homepage3";
-import Homepage3Light from "./pages/Homepage3Light";
-import Homepage3Dark from "./pages/Homepage3Dark";
-import Bloglist from "./pages/Bloglist";
-import BlogDetails from "./pages/BlogDetails";
+// import HomepageLight from "./pages/HomepageLight";
+// import HomepageDark from "./pages/HomepageDark";
+// import Homepage2 from "./pages/Homepage2";
+// import Homepage2Light from "./pages/Homepage2Light";
+// import Homepage2Dark from "./pages/Homepage2Dark";
+// import Homepage3 from "./pages/Homepage3";
+// import Homepage3Light from "./pages/Homepage3Light";
+// import Homepage3Dark from "./pages/Homepage3Dark";
+// import Bloglist from "./pages/Bloglist";
+// import BlogDetails from "./pages/BlogDetails";
 import "./App.scss";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" exact>
           <Homepage />
         </Route>
-        <Route path="/dark" exact>
+        {/* <Route path="/dark" exact>
           <HomepageDark />
         </Route>
         <Route path="/light" exact>
@@ -45,7 +45,7 @@ function App() {
           <Homepage3Dark />
         </Route>
         <Route path="/blogs" component={Bloglist} exact />
-        <Route path="/blogs/blog-details/:id/:title" component={BlogDetails} />
+        <Route path="/blogs/blog-details/:id/:title" component={BlogDetails} /> */}
       </Switch>
     </BrowserRouter>
   );

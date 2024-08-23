@@ -28,7 +28,7 @@ function Herosection(props) {
 
           <h1 className="mb-2 mt-0">Hajar Zemzem</h1>
           <p>
-            {" Software Engineer"}
+            {" Senior Software Engineer"}
             {/* <Typed
               strings={[
                 "Software Engineer",
@@ -78,12 +78,12 @@ function Herosection(props) {
               smooth={true}
               duration={500}
             >
-              Hire me
+              Let's Connect
             </Link>
           </div>
         </div>
 
-        <div className="scroll-down">
+        {/* <div className="scroll-down">
           <Link
             to="section-about"
             spy={true}
@@ -96,7 +96,7 @@ function Herosection(props) {
               <span className="wheel"></span>
             </span>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

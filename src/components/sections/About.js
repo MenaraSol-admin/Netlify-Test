@@ -8,22 +8,61 @@ const aboutContent = {
   name: "Hajar Zemzem",
   avatarImage: "/images/photo.png",
   content:
-    "I am Hajar Zemzem, a Software Engineer from Atlanta, United States. I have rich experience in software design, building, and customization.",
+    "With over six years of experience in software engineering, I specialize in crafting high-performance, scalable applications that meet both customer-facing and internal operational needs. My journey spans across diverse industries, including insurance, retail, and media, where I've honed my skills in technologies like ReactJS, Python, and Java. I've led projects from conceptualization to deployment, focusing on delivering robust solutions while fostering a collaborative and innovative environment. With a strong foundation in machine learning and artificial intelligence, I'm passionate about leveraging technology to solve complex problems and drive business success. Whether working independently or within a team, I am dedicated to continuous learning and the pursuit of excellence in every project I undertake.",
 };
 
-const progressData = [
+const progressData1 = [
   {
     id: 1,
-    title: "Development",
+    title: "ReactJS",
     percantage: 95,
-    progressColor: "#FFD15C",
+    progressColor: "#426B69",
   },
   {
     id: 2,
-    title: "UI/UX Design",
-    percantage: 75,
-    progressColor: "#FF4C60",
+    title: "TypeScript",
+    percantage: 85,
+    progressColor: "#426B69",
   },
+  {
+    id: 3,
+    title: "Java",
+    percantage: 80,
+    progressColor: "#426B69",
+  },
+  {
+    id: 4,
+    title: "Problem-Solving & Critical Thinking",
+    percantage: 90,
+    progressColor: "#426B69",
+  }
+];
+
+const progressData2 = [
+  {
+    id: 1,
+    title: "Python",
+    percantage: 85,
+    progressColor: "#426B69",
+  },
+  {
+    id: 2,
+    title: "Agile Development (OOA/OOD Principles)",
+    percantage: 75,
+    progressColor: "#426B69",
+  },
+  {
+    id: 3,
+    title: "Team Leadership & Mentorship",
+    percantage: 80,
+    progressColor: "#426B69",
+  },
+  {
+    id: 4,
+    title: "Restful APIs",
+    percantage: 95,
+    progressColor: "#426B69",
+  }
 ];
 
 const counterData = [
@@ -35,8 +74,8 @@ const counterData = [
   },
   {
     id: 2,
-    title: "Cup of coffee",
-    count: 1530,
+    title: "Cups of coffee",
+    count: 1508,
     icon: "icon-cup",
   },
   // {
@@ -63,7 +102,7 @@ function About() {
           <div className="col-md-9 triangle-left-md triangle-top-sm">
             <div className="rounded bg-white shadow-dark padding-30">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <p>{aboutContent.content}</p>
                   {/* <div className="mt-3">
                     <a href="!#" className="btn btn-default">
@@ -76,7 +115,18 @@ function About() {
                   ></div>
                 </div>
                 <div className="col-md-6">
-                  {progressData.map((progress) => (
+                  {progressData1.map((progress) => (
+                    <TrackVisibility
+                      once
+                      key={progress.id}
+                      className="progress-wrapper"
+                    >
+                      <Skill progress={progress} />
+                    </TrackVisibility>
+                  ))}
+                </div>
+                <div className="col-md-6">
+                  {progressData2.map((progress) => (
                     <TrackVisibility
                       once
                       key={progress.id}

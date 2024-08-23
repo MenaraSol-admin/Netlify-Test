@@ -27,7 +27,7 @@ function Service({ service }) {
         boxShadow: `0px 5px 20px 0px rgba(${hexToRgb(color)}, 0.5)`,
       }}
     >
-      <img src={icon} alt={title} />
+      <img src={icon} alt={title} style={{ filter: 'invert(37%) sepia(71%) saturate(466%) hue-rotate(10deg) brightness(94%) contrast(95%)' }} />
       <h3 className="mb-3 mt-0">{title}</h3>
       <p className="mb-0">{content}</p>
     </div>
