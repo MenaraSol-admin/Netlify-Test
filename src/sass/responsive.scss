@@ -139,6 +139,12 @@ only screen and (min-device-pixel-ratio: 1.5){
 	}
 }
 
+.col-md-9.triangle-left-md.triangle-top-sm {
+	&:before {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 576px) {
 	.portfolio-info {
 		li {

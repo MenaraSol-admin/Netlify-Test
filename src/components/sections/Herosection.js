@@ -1,17 +1,86 @@
-import React from "react";
-import Typed from "react-typed";
-import { Link } from "react-scroll";
+import React, { useEffect, useState, useMemo } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadAll } from "@tsparticles/all";
+import { Link } from "react-router-dom";
 
 function Herosection(props) {
-  const { x, y } = props.position;
-  const { height, width } = props.elementDimensions;
-  const activeParallax = (depth = 15) => {
-    let posX = (width / 2 - x) / depth;
-    let posY = (height / 2 - y) / depth;
-    return {
-      transform: `translate(${posX}px, ${posY}px)`,
-    };
-  };
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadAll(engine);
+    }).then(() => setInit(true));
+  }, []);
+
+  const options = useMemo(() => ({
+    background: {
+      color: {
+        value: "#02111B",
+      },
+    },
+    fpsLimit: 60,
+    particles: {
+      number: {
+        value: 50,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#ffffff",
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.5,
+      },
+      size: {
+        value: 3,
+        random: true,
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 6,
+        direction: "none",
+        outModes: {
+          default: "out",
+        },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+        push: {
+          quantity: 4,
+        },
+      },
+    },
+    detectRetina: true,
+  }), []);
+
+  if (!init) return null;
 
   return (
     <section
@@ -21,54 +90,30 @@ function Herosection(props) {
           ? "home d-flex align-items-center light"
           : "home d-flex align-items-center"
       }
+      style={{ position: "relative", overflow: "hidden" }}
     >
-      <div className="container">
+      {/* <Particles
+        id="tsparticles"
+        options={options}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 1,
+        }}
+      /> */}
+
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
         <div className="intro">
           <img src="images/photo.png" alt="image" className="mb-4" />
 
           <h1 className="mb-2 mt-0">Hajar Zemzem</h1>
           <p>
             {" Senior Software Engineer"}
-            {/* <Typed
-              strings={[
-                "Software Engineer",
-              ]}
-              typeSpeed={80}
-              backSpeed={40}
-              attr="value"
-              loop
-            > */}
-              <label value></label>
-            {/* </Typed> */}
+            <label value></label>
           </p>
-
-          {/* <ul className="social-icons light list-inline mb-0 mt-4">
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-behance"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-dribbble"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-pinterest-p"></i>
-              </a>
-            </li>
-          </ul> */}
 
           <div className="mt-4">
             <Link
@@ -82,21 +127,6 @@ function Herosection(props) {
             </Link>
           </div>
         </div>
-
-        {/* <div className="scroll-down">
-          <Link
-            to="section-about"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="mouse-wrapper"
-          >
-            <span>Scroll Down</span>
-            <span className="mouse">
-              <span className="wheel"></span>
-            </span>
-          </Link>
-        </div> */}
       </div>
     </section>
   );

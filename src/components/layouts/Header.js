@@ -107,6 +107,17 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
                 <i className="icon-layers"></i>Works
               </Link>
             </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="section-testimoninal"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <i className="icon-bubble"></i>Testimonials
+              </Link>
+            </li>
             {/* <li>
               <Link
                 activeClass="active"

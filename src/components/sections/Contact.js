@@ -37,7 +37,7 @@ function Contact() {
 
     // Send form data to backend
     try {
-      const response = await fetch("https://portfolio-mailer-6877965b59ce.herokuapp.com/send", {
+      const response = await fetch("http://localhost:3030/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,6 +60,7 @@ function Contact() {
         setMessage("Failed to send your message. Please try again.");
       }
     } catch (error) {
+      console.log('Error:', error);
       setError(true);
       setMessage("An error occurred. Please try again later.");
     }

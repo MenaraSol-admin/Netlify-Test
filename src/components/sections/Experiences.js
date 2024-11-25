@@ -36,49 +36,69 @@ const experienceData = [
     title: "Senior Software Engineer - MagMutual",
     years: "February 2023 - July 2024",
     content:
-      ["- Collaborate within a high-functioning team to develop and enhance diverse applications addressing the company's needs, including customer-facing apps and internal operational tools, leveraging ReactJS, Python FastApi, and other relevant technologies.", "- Play a key role in the agile development process, applying OOA/OOD principles and ensuring the delivery of quality code for critical projects, contributing to the company's growth and success.", "- Continuously seek learning opportunities and embrace a proactive approach to optimize application performance, while mentoring and supporting other developers, fostering a culture of innovation and excellence."]
+      ["- Collaborated within a high-performing team to design, develop, and enhance various applications that address both customer-facing needs and internal operational requirements, utilizing technologies like ReactJS, Python FastAPI, and more.", 
+        "- Actively contributed to the agile development process, applying Object-Oriented Analysis and Design (OOA/OOD) principles to ensure the delivery of robust, high-quality code for key projects, driving company growth and operational success.", 
+        "- Embraced continuous learning and a proactive approach to optimize application performance, while mentoring team members and fostering a culture of innovation, technical excellence, and collaborative growth."]
   },
   {
     id: 2,
     title: "Software Engineer - The Home depot",
     years: "Aug 2021 - January 2023",
     content:
-      ["- Responsible for programming and customizing services within the vendor onboarding applications.", "- Take business requirements and develop the total technical design for assigned projects and ensure proper usage as part of the design efforts in building a system to be put into production.", "- Conduct appropriate test reviews on assigned projects as necessary and present findings and offer solutions to management."],
+      ["- Programmed and customized services within vendor onboarding applications to streamline workflows and improve operational efficiency.", 
+        "- Translated business requirements into comprehensive technical designs, overseeing each phase from conception to implementation to ensure solutions met production standards.", 
+        "- Conducted thorough testing and code reviews for assigned projects, presenting findings and recommending solutions to management to enhance system performance and reliability."],
   },
   {
     id: 3,
-    title: "Developer II - Cox Enterprises",
+    title: "Developer II - Cox Enterprises - Atlanta Journal Constitution",
     years: "Nov 2020 - July 2021",
     content:
-      ["- Update and maintain the AJC website, as well as other newspaper websites part of Cox Media using ReactJS.", "- Use React to build new features and story page layouts.- Use APIs to build widgets to enhance the AJC website such as the Golf Leaderboard widget: https://www.ajc.com/sports/golf/leaderboard/", "- Work with designers to implement the new redesign and rebranding of the newspaper site."]
+      ["- Updated and maintained the AJC website, along with other Cox Media newspaper sites, leveraging ReactJS for enhanced performance and user experience.", 
+        "- Developed new features and story page layouts using React, improving the site's interactivity and content presentation.",
+        "- Integrated APIs to create dynamic widgets, such as the Golf Leaderboard widget (see Works section), enriching user engagement on the AJC website.", 
+        "- Collaborated closely with designers to implement a comprehensive site redesign and rebranding, ensuring visual consistency and a modernized look across the newspaper platform."]
   },
   {
     id: 4,
     title: "Lead Web Developer - EYStudios",
     years: "Nov 2019 – Nov 2020",
     content:
-      ["- Along the previous duties, manage the in-house dev team and the overseas team in India.", "- Estimate tasks and manage timelines for projects.", "- Establish a Git flow and implement code review rules between team members."],
+      ["- Oversaw task estimation and timeline management to ensure timely and efficient project delivery.", 
+        "- Established a streamlined Git flow process and implemented robust code review standards to improve code quality and foster team collaboration.", 
+        "- Directed both the in-house development team and an overseas team in India, coordinating workflows and aligning project milestones across time zones.",
+        "- Developed and maintained project documentation to track progress and ensure smooth handoffs, addressing technical challenges and providing mentorship to team members.",
+        "- Worked closely with product stakeholders to align technical strategies with business goals, adapting development approaches to meet changing project requirements."],
   },
   {
     id: 5,
     title: "Web Developer - EYStudios",
     years: "Aug 2018 – Oct 2019",
     content:
-      ["- Maintain, enhance, and develop front-end functionality to meet changing customer needs.", "- Develop front-end features using cross-browser compliant HTML, CSS, and JavaScript (JQuery, ReactJS, VueJS, NodeJS) to the highest specifications.", "- Implement ecommerce and CMS based sites using platforms such as Bigcommerce, Shopify, and Wordpress. - Collaborate with account managers, developers and designers to ensure the successful and timely delivery of projects."],
+      ["- Maintained, enhanced, and built front-end functionality to adapt to evolving customer needs and improve user experience.", 
+        "- Developed high-spec front-end features using cross-browser compatible HTML, CSS, and JavaScript frameworks, including jQuery, ReactJS, VueJS, and NodeJS.", 
+        "- Implemented e-commerce and CMS-based websites on platforms like BigCommerce, Shopify, and WordPress, ensuring seamless integrations and optimal performance.", 
+        "- Collaborated closely with account managers, developers, and designers to coordinate project timelines and align technical execution with client expectations, achieving successful and timely project deliveries."],
   },
   {
     id: 6,
     title: "Software Engineer Intern - iVoyant",
     years: "May 2018 – July 2018",
     content:
-      ["Use React and NPM packages to generate charts and dashboards based on data entered by clients. Create custom software that companies use to track progress of tasks, projects, etc. Use MERN stack to get data and translate it into visuals."],
+      ["Used React and NPM packages to generate charts and dashboards based on data entered by clients.", 
+        "- Created custom software that companies use to track progress of tasks, projects, etc.", 
+        "- Used MERN stack to get data and translate it into visuals using ChartJS."],
   },
   {
     id: 7,
     title: "Full Stack Web Development TA - Georgia Institute of Technology",
     years: "Feb 2018 – Apr 2019",
     content:
-      ["Assist instructor at the coding bootcamp at GA Tech. Walk around class during code activities and projects to assist students. Research and answer student questions when the instructor is unable to. Grade all homework assignments. HTML5 | CSS3 | Bootstrap | JQuery | JSON | AJAX | JavaScript | MySQL | MERN Stack | .NET | C# | Comp Sci Fundamentals"],
+      ["- Supported lead instructors at Georgia Tech’s coding bootcamp, assisting with classroom activities, projects, and code exercises.",
+        "- Provided hands-on guidance to students during coding activities, offering one-on-one support and answering technical questions.",
+        "- Conducted research to address complex student queries, ensuring comprehensive understanding even beyond classroom coverage.",
+        "- Graded all homework assignments, providing feedback to enhance students' learning experience and foster their development in full- stack web technologies."
+      ],
   },
 ];
 
